@@ -2,8 +2,6 @@
 
 I got a sudden desire to implement Tetris. I attempted to implement it in 4 hours, but then I discovered that rotating pieces in Tetris is more complicated than expected. In the end, it took around two days.
 
-<video src='sample_game.mp4'>
-
 # Controls
 
 Move the tetriminos with the arrow keys and rotate them using R and T.
