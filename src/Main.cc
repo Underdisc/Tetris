@@ -693,9 +693,9 @@ void CustomRegistrar() {
   Registrar::Register<Flash, Comp::Sprite, Comp::AlphaColor>();
 }
 
-int main(int argc, char *argv[]) {
+int WinMain(void) {
   Registrar::nRegisterCustomTypes = CustomRegistrar;
-  Result result = VarkorInit(argc, argv, "Tetris", PROJECT_DIRECTORY);
+  Result result = VarkorInit(__argc, __argv, "Tetris", PROJECT_DIRECTORY);
   LogAbortIf(!result.Success(), result.mError.c_str());
 
   Editor::nEditorMode = false;
