@@ -1,4 +1,4 @@
-// Varkor Version: 70643fe
+// Varkor Version: 3af75a0
 
 #include <AssetLibrary.h>
 #include <Error.h>
@@ -12,6 +12,7 @@
 #include <comp/Text.h>
 #include <comp/Transform.h>
 #include <ds/Vector.h>
+#include <editor/Editor.h>
 #include <gfx/Shader.h>
 #include <world/Object.h>
 #include <world/World.h>
@@ -697,6 +698,9 @@ int main(int argc, char *argv[]) {
   Result result = VarkorInit(argc, argv, "Tetris", PROJECT_DIRECTORY);
   LogAbortIf(!result.Success(), result.mError.c_str());
 
+  Editor::nEditorMode = false;
+  Editor::nHideInterface = true;
+  World::nPause = false;
   Assets::Initialize();
   World::SpaceIt spaceIt = World::CreateTopSpace();
   World::MemberId tetrisMember = spaceIt->CreateMember();
