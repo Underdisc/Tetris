@@ -694,7 +694,7 @@ void CustomRegistrar() {
 
 int main(int argc, char *argv[]) {
   Registrar::nRegisterCustomTypes = CustomRegistrar;
-  Result result = VarkorInit(argc, argv, "Empty", PROJECT_DIRECTORY);
+  Result result = VarkorInit(argc, argv, "Tetris", PROJECT_DIRECTORY);
   LogAbortIf(!result.Success(), result.mError.c_str());
 
   Assets::Initialize();
