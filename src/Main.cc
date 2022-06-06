@@ -1,4 +1,4 @@
-// Varkor Version: 3af75a0
+// Varkor Version: da0bd43
 
 #include <AssetLibrary.h>
 #include <Error.h>
@@ -20,7 +20,7 @@
 namespace Assets {
 AssetId nSpriteColorShader;
 void Initialize() {
-  nSpriteColorShader = AssLib::CreateInit<Gfx::Shader>(
+  nSpriteColorShader = AssLib::Create<Gfx::Shader>(
       "SpriteColor", "vres/shader/sprite.vs", "vres/shader/color.fs");
 }
 } // namespace Assets
